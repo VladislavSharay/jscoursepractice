@@ -1,0 +1,62 @@
+body{
+    background-image: linear-gradient(to right, rgb(44, 44, 44) 700px,  rgb(27, 27, 27) 1%);
+}
+
+
+.slider{
+    position: absolute;
+    height: 480px;
+    left:500px;
+    top:250px;
+}
+
+#button1{
+    color: aliceblue;
+    position: absolute;
+    left:1095px;
+    top:480px;
+    cursor: pointer;
+    user-select: none;
+    padding: 15px 15px;
+}
+#button1:hover{
+    border: 1px solid rgb(233, 233, 233, 0);
+    background-color: rgb(233, 233, 233, 0.2);
+    border-radius: 10px 0px 0px 10px;
+}
+
+#button2{
+    color: aliceblue;
+    position: absolute;
+    left:500px;
+    top:480px;
+    cursor: pointer;
+    user-select: none;
+    padding: 15px 15px;
+}
+#button2:hover{
+    border: 1px solid rgb(233, 233, 233, 0);
+    background-color: rgb(233, 233, 233, 0.2);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.point{
+    position: relative;
+    top: 700px;
+    left:780px;
+    cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #717171;
+  }
+
+
+
+
