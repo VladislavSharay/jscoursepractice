@@ -23,10 +23,10 @@ body {
 
 #container {
     font-weight: bolder;
-    color: rgb(15, 15, 15);
+    color: white;
     text-align: center;
     cursor: pointer;
-    border: 4px solid rgb(15, 15, 15);
+    border: 4px solid white;
     border-radius: 10px;
     width: 195px;
     height: 52px;
@@ -36,16 +36,16 @@ body {
 }
 
 #html:hover {
-    background-color: rgb(15, 15, 15);
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 #js:hover {
-    background-color: rgb(15, 15, 15);
-    color: white;
+    background-color: white;
+    color: black;
 }
 
 #css:hover {
-    background-color: rgb(15, 15, 15);
-    color: white;
+    background-color: white;
+    color: black;
 }
