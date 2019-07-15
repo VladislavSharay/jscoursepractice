@@ -1,0 +1,61 @@
+ body {
+    background-color: #f8bacd;
+    width: 0; 
+    height: 0; 
+    border-top: 900px solid rgb(20, 151, 184); 
+    border-right: 1100px solid transparent;
+    margin: 0%; 
+    border: 0%; 
+}
+h1{
+    position: absolute;
+    top: 80px;
+    left: 1200px;
+    transform: translate(-50%, -50%);
+    color: rgb(20, 151, 184);
+    font-size: 250%;
+    font-weight: bolder;
+}
+
+.button {
+    
+    font-size: 10%;
+    font-weight: bolder;
+    transform: translate(-50%, -50%);
+    background-color: rgb(20, 151, 184);
+    border: none;
+    color: white;
+    padding: 25px 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+nav{
+    position: absolute;
+    top: 200px;
+    left: 1200px;
+}
+.insta{
+    font-family: Florence, cursive;
+    position: absolute;
+
+    top: 300px;
+    left: 350px;
+    transform: translate(-50%, -50%);
+    color:#f8bacd;
+    font-size: 450%;
+    text-decoration: none;
+}
+.name{
+    font-family: Florence, cursive;
+    top: 580px;
+    left: 280px;
+    font-size: 300%;
+    display:inline-block;
+    position:absolute;
+    color:#700000;
+    -webkit-transform:rotate(-40deg);
+}

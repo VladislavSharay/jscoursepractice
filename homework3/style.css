@@ -1,0 +1,24 @@
+
+body{
+    background-image: linear-gradient(to right, #4830F0 0%, #9EEFE1 51%, rgb(0, 126, 105) 100%);
+}
+.button {
+    
+    
+    font-weight: bolder;
+    transform: translate(-50%, -50%);
+    background-color: rgb(20, 151, 184);
+    border: none;
+    color: white;
+    padding: 25px 70px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative;
+    top: 300px;
+    left: 50%;
+}
+

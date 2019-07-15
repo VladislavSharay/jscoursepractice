@@ -1,0 +1,66 @@
+#htmlBtn{
+        font-weight: bolder;
+       
+        color: rgb(126, 126, 126);
+        padding: 10px 70px;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+        border: 1px solid rgb(70, 70, 70);
+        border-radius: 10px 10px 0px 0px;
+    
+}
+
+#htmlBtn:hover {
+
+    color: rgb(0, 153, 255);
+    
+}
+
+#cssBtn{
+        font-weight: bolder;
+        
+        color: rgb(126, 126, 126);
+        padding: 10px 70px;
+        text-align: center;
+        display: inline-block; 
+        cursor: pointer;
+        border: 1px solid rgb(70, 70, 70);
+        border-radius: 10px 10px 0px 0px;
+    
+}
+
+#cssBtn:hover {
+
+    color: rgb(0, 153, 255);
+}
+
+
+#jsBtn{
+        font-weight: bolder;
+        
+        color: rgb(126, 126, 126);
+        padding: 10px 70px;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+        border: 1px solid rgb(70, 70, 70);
+        border-radius: 10px 10px 0px 0px;
+    
+}
+#jsBtn:hover {
+
+    color: rgb(0, 153, 255);
+}
+#content{
+    font-weight: bolder;
+    color: black;
+
+    text-align: left;
+    cursor: pointer;
+    border: 1px solid rgb(70, 70, 70);
+    border-radius: 0px 0px 10px 10px;
+    border-top: none;
+    width: 487px;
+    height: 200px;
+}

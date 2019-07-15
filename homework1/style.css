@@ -1,0 +1,20 @@
+body {
+    background-color: #f8bacd;
+}
+
+.hello {
+    font-family: Florence, cursive;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(73, 85, 255);
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+.hello h3 {
+    text-transform: capitalize;
+    color: rgb(145, 0, 0)
+}
