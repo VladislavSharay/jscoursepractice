@@ -31,8 +31,8 @@ modal.style.display = "none";
 
 
 button.innerText = 'Click Me';
-span.innerText="X";
-cnt.innerText="Hello world";
+span.innerText="x";
+cnt.innerText="Здесь какой-то текст";
 
 
 button.onclick = function() {

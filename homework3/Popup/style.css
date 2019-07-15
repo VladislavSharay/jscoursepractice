@@ -32,18 +32,28 @@
 } 
 
 #cnt{
+  font-family: monospace;
+  font-size: 200%;
   background-color: #fefefe;
   margin: auto;
-  padding: 20px;
+  padding: 40px;
   border: 1px solid #888;
-  width: 50%;
+  width: 400px;
+  height: 200px;
 
 } 
 
 #close {
-  float: right;
+  font-weight: bolder;
+  position: relative;
   font-size: 28px;
   font-weight: 50px;
+  left: 1150px;
+  top: 40px;
+  padding: 2px 10px;
+  border: 1px solid rgb(92, 92, 92);
+  font-family: monospace;
+  
 } 
  #close:hover,
 #close:focus {
