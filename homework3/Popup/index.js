@@ -31,7 +31,7 @@ modal.style.display = "none";
 
 
 button.innerText = 'Click Me';
-span.innerText="x";
+span.innerText="\u2716";
 cnt.innerText="Здесь какой-то текст";
 
 
