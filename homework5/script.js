@@ -155,7 +155,10 @@ function doRequestComment(data, token) {
 let urlImg;
 let urlImgOut
 let formImg = document.forms.namedItem('imagesIN');
-
+let imgclass = document.querySelector('.images');
+let imgOut = document.createElement('img');
+imgOut.id = 'imgOut'; 
+imgclass.appendChild(imgOut);
 formImg.addEventListener('submit', function (ev) {
     ev.preventDefault();
     var formImgD = new FormData(formImg);
@@ -177,11 +180,9 @@ function doRequestImg(method, data, headers) {
         json => {
             console.log(json)
             urlImg = json.url;
-            let imgclass = document.querySelector('.images');
-            let imgOut = document.createElement('img');
-            imgclass.appendChild(imgOut);
-            imgOut.id = 'imgOut';  
+             
             imgOut.src=urlImg;
+           
             
         }
     );
