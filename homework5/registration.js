@@ -164,11 +164,11 @@ function doRequestImg(method, data, headers){
       );
 }
 
-let img1=document.querySelector('.images');
+let imgclass=document.querySelector('.images');
 let imgOut = document.createElement('img'); 
  imgOut.id='imgOut'; 
 
- img1.appendChild(imgOut)
+ imgclass.appendChild(imgOut)
 
 // urlImg.appendChild('#imgOut');
 
