@@ -76,11 +76,8 @@ function getUsers() {
 
 let formSign = document.querySelector('#loginIN')
 
-formSign.addEventListener('submit', event => {
-    event.preventDefault();
-})
-
 formSign.addEventListener('submit', function (event) {
+    event.preventDefault();
     let log = document.getElementById("logSignIn");
     let pass = document.getElementById("passSignIn");
     let vallog = log.value;
@@ -116,12 +113,8 @@ function doRequestSignIn(data) {
 
 let formComment = document.querySelector('#commentIN')
 
-formComment.addEventListener('submit', event => {
-    event.preventDefault();
-})
-let commentOut;
-
 formComment.addEventListener('submit', function (event) {
+    event.preventDefault();
     let commentAdd = document.getElementById("commentAdd");
     let parrentId = document.getElementById("parrentId");
     let valCommentAdd = commentAdd.value;
