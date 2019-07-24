@@ -179,9 +179,9 @@ function doRequestImg(method, data, headers) {
             urlImg = json.url;
             let imgclass = document.querySelector('.images');
             let imgOut = document.createElement('img');
+            imgclass.appendChild(imgOut);
             imgOut.id = 'imgOut';  
             imgOut.src=urlImg;
-            imgclass.appendChild(imgOut);
             
         }
     );
