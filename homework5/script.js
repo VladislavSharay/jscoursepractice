@@ -105,13 +105,6 @@ function doRequestSignIn(data) {
             console.log(json)
             token = json.token;
             alert("Вы авторизовались!")
-            // document.cookie = "cookieToken=token";
-            // alert( document.cookie(cookieToken) );
-            function setCookie(){
-                let cookie='cookieToken=token'
-                document.cookie = cookie;
-            }
-            console.log(document.cookie)
         }
     );
 }
