@@ -104,6 +104,7 @@ function doRequestSignIn(data) {
         json => {
             console.log(json)
             token = json.token;
+            alert("Вы авторизовались!")
         }
     );
 }
