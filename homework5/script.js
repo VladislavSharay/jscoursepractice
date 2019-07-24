@@ -75,7 +75,7 @@ function getUsers() {
 ////////////////////////////////////////////////////////////////////////
 
 let formSign = document.querySelector('#loginIN')
-
+let token;
 formSign.addEventListener('submit', function (event) {
     event.preventDefault();
     let log = document.getElementById("logSignIn");
@@ -105,6 +105,13 @@ function doRequestSignIn(data) {
             console.log(json)
             token = json.token;
             alert("Вы авторизовались!")
+            // document.cookie = "cookieToken=token";
+            // alert( document.cookie(cookieToken) );
+            function setCookie(){
+                let cookie='cookieToken=token'
+                document.cookie = cookie;
+            }
+            console.log(document.cookie)
         }
     );
 }
@@ -152,7 +159,19 @@ function doRequestComment(data, token) {
 /////////////////////////////////////////////////////////////
 
 
-let urlImg
+let urlImg;
+let urlImgOut
+let formImg = document.forms.namedItem('imagesIN');
+
+formImg.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    var formImgD = new FormData(formImg);
+
+    formImgD.append('parentEntityId', '1455qwe1');
+    
+    doRequestImg('POST', formImgD, {'token': token});
+})
+
 
 function doRequestImg(method, data, headers) {
     fetch('https://intern-staging.herokuapp.com/api/file', {
@@ -165,28 +184,13 @@ function doRequestImg(method, data, headers) {
         json => {
             console.log(json)
             urlImg = json.url;
+            let imgclass = document.querySelector('.images');
+            let imgOut = document.createElement('img');
+            imgOut.id = 'imgOut';  
+            imgOut.src=urlImg;
+            imgclass.appendChild(imgOut);
+            
         }
     );
 }
-
-let imgclass = document.querySelector('.images');
-let imgOut = document.createElement('img');
-imgOut.id = 'imgOut';
-
-imgclass.appendChild(imgOut)
-
-
-let formImg = document.forms.namedItem('imagesIN');
-
-formImg.addEventListener('submit', function (ev) {
-    var formImgD = new FormData(formImg);
-
-    formImgD.append('parentEntityId', '1455qwe1');
-
-    doRequestImg('POST', formImgD, {
-        'token': token
-    });
-
-    ev.preventDefault();
-
-})
+  
