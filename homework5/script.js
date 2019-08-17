@@ -117,15 +117,17 @@ let formComment = document.querySelector('#commentIN')
 formComment.addEventListener('submit', function (event) {
     event.preventDefault();
     let commentAdd = document.getElementById("commentAdd");
-    let parrentId = document.getElementById("parrentId");
+    let parrentIdIN = document.getElementById("parrentId");
     let valCommentAdd = commentAdd.value;
-    let valParrentId = parrentId.value;
+    let valParrentId = parrentIdIN.value;
     let comment = {
         message: valCommentAdd,
         parrentId: valParrentId
     };
     let tokenStr = token;
+    
     doRequestComment(comment, tokenStr);
+    CommentOut(tokenStr);
 });
 
 
@@ -145,6 +147,23 @@ function doRequestComment(data, token) {
             commentOut = json.message;
             document.getElementById('comment').innerHTML = commentOut;
 
+        }
+    );
+}
+
+
+function CommentOut(token) {
+    fetch('https://intern-staging.herokuapp.com/api/comment', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'token': token
+        },
+    }).then(
+        resp => resp.json()
+    ).then(
+        json => {
+            console.log(json)
         }
     );
 }
