@@ -28,7 +28,7 @@ class SessionStorage {
     }
 
     getItem(key) {
-        return sessionStorage.getItem(key);
+         sessionStorage.getItem(key);
     }
 
     removeItem(key) {
@@ -47,18 +47,51 @@ console.log('sessionStorage.clear()')
 
 //MEDIA
 class Media {
-// getMedia(){
-//     navigator.mediaDevices.getUserMedia(constraints) // { audio: true, video: true }
-//     .then((stream) => {
-//       var video = document.querySelector('video'); 
-//       video.srcObject = mediaStream;
-//       video.onloadedmetadata = function(e) {
-//         video.play(); 
-//       };
-//     })
-//     .catch((err) => { 
-//       /* handle the error */ 
-//     });
-// }
+
+    constructor(selector, audio = false, video = true) {
+        this.selector = selector;
+        this.constraints = {
+            audio: audio,
+            video: video
+        }
+        this.video = document.createElement('video');
+        this.video.width = 640;
+        this.video.height = 400;
+    }
+
+    getMedia() {
+        return new Promise((resolve, reject) => {
+            const video = this.video;
+            const selector = this.selector;
+            let mediaDiv;
+            navigator.mediaDevices.getUserMedia(this.constraints)
+                .then((stream) => {
+                    if (selector === undefined) mediaDiv = document.body;
+                    else mediaDiv = document.querySelector(selector);
+                    mediaDiv.appendChild(video);
+                    video.style.display = 'block';
+                    video.srcObject = stream;
+                    video.onloadedmetadata = () => video.play();
+                    resolve()
+                })
+                .catch((err) => {
+                    console.log(err);
+                    reject();
+                });
+        });
+    }
+
+    setWidth(width) {
+        if(width != undefined) this.video.width = width;
+    }
+
+    setHeight(height) {
+        if(height != undefined) this.video.height = height;
+    }
+
+    setParam(width, height) {
+        this.setWidth(width);
+        this.setHeight(height);
+    }
 
 }
